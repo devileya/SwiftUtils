@@ -18,8 +18,8 @@ public struct HeartButtonView: View {
         isLiked ? 0.7 : 1.3
     }
     
-    public init(isLiked: Bool, action: @escaping () -> Void) {
-        self.isLiked = isLiked
+    public init(isLiked: Binding<Bool>, action: @escaping () -> Void) {
+        self._isLiked = isLiked
         self.action = action
     }
     
