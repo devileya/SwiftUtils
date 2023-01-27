@@ -9,7 +9,7 @@ import SwiftUI
 
 public struct HeartButtonView: View {
     @Binding public var isLiked: Bool
-    @State private var animate = false
+    @State public var animate = false
     
     let action: () -> Void
     
