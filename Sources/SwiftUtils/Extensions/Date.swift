@@ -9,7 +9,7 @@ import Foundation
 
 extension Date {
     
-    init(dateString: String) {
+    public init(dateString: String) {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyy-MM-dd"
         let date = formatter.date(from: dateString) ?? Date()
