@@ -7,14 +7,14 @@
 
 import SwiftUI
 
-struct LazyNavigationView<Content: View>: View {
+public struct LazyNavigationView<Content: View>: View {
     let build: () -> Content
     
     init(_ build: @autoclosure @escaping() -> Content) {
         self.build = build
     }
     
-    var body: Content {
+    public var body: Content {
         build()
     }
 }

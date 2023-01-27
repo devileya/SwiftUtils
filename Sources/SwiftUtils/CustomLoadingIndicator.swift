@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct CustomLoadingIndicator: View {
-    var body: some View {
+public struct CustomLoadingIndicator: View {
+    public var body: some View {
         ProgressView()
             .progressViewStyle(.circular)
             .accentColor(.white)

@@ -8,16 +8,16 @@
 import SwiftUI
 
 // Simple preference that observes a CGFloat.
-struct ScrollViewOffsetPreferenceKey: PreferenceKey {
-    static var defaultValue = CGFloat.zero
+public struct ScrollViewOffsetPreferenceKey: PreferenceKey {
+    public static var defaultValue = CGFloat.zero
     
-    static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
+    public static func reduce(value: inout CGFloat, nextValue: () -> CGFloat) {
         value += nextValue()
     }
 }
 
 // A ScrollView wrapper that tracks scroll offset changes.
-struct ObservableScrollView<Content>: View where Content : View {
+public struct ObservableScrollView<Content>: View where Content : View {
     @Namespace var scrollSpace
     
     @Binding var scrollOffset: CGFloat
@@ -29,7 +29,7 @@ struct ObservableScrollView<Content>: View where Content : View {
         self.content = content
     }
     
-    var body: some View {
+    public var body: some View {
         ScrollView {
             ScrollViewReader { proxy in
                 content(proxy)
