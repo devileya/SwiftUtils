@@ -11,7 +11,7 @@ public struct HeartButtonView: View {
     @Binding public var isLiked: Bool
     @State private var animate = false
     
-    let action: () -> Void
+    public let action: () -> Void
     
     private let animationDuration: Double = 0.1
     private var animationScale: CGFloat {
@@ -40,8 +40,8 @@ public struct HeartButtonView: View {
     }
 }
 
-public struct HeartButtonView_Previews: PreviewProvider {
-    public static var previews: some View {
+struct HeartButtonView_Previews: PreviewProvider {
+    static var previews: some View {
         HeartButtonView(isLiked: .constant(false), action: {})
     }
 }
